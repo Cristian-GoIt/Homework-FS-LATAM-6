@@ -1,12 +1,12 @@
-header {
+.page-header {
   display: flex;
   align-items: flex-start;
 
   margin: 0 auto;
-  height:680px; 
+  height: 680px;
 }
 
-.header_sidebar {
+.social-sidebar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,25 +15,18 @@ header {
   height: 100%;
   width: 155px;
 }
-.header_sidebar img {
+.social-sidebar__logo {
   margin-top: 50px;
   width: 80px;
 }
-
-.header_sidebar .social{
+.social-sidebar__section {
   height: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
-.header_sidebar .social .rectangle{
-  display: block;
-  height: 60px;
-  width: 2px;
-  background-color: var(--title-color);
-}
-.header_sidebar .social a {
+.social-sidebar__link {
   color: var(--title-color);
   display: block;
   height: 100px;
@@ -45,18 +38,25 @@ header {
   text-transform: capitalize;
   transform: rotate(-90deg);
 }
-.header_sidebar .social a:hover{
+.social-sidebar__link:hover {
   color: var(--main-color);
 }
+.social-sidebar .rectangle {
+  display: block;
+  height: 60px;
+  width: 2px;
+  background-color: var(--title-color);
+}
 
-.header_content {
+.hero-section {
   position: relative;
   background-color: var(--dark-bg-1);
   height: 100%;
   padding: 50px;
   width: calc(100% - 155px);
 }
-.header_content .navbar {
+
+.navbar {
   position: relative;
   display: flex;
   align-items: center;
@@ -65,22 +65,28 @@ header {
   height: 50px;
   z-index: 10;
 }
-.header_content .navbar .navbar_menu {
+.navbar__menu {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
 }
-.header_content .navbar .navbar_menu li a {
-  text-transform: capitalize;
+.navbar__item {
   color: var(--white);
   font-size: 16px;
+  text-transform: capitalize;
+  transition: color 0.2s ease;
 }
-.header_content .navbar .navbar_menu li a:hover {
+.navbar__link {
+  color: var(--white);
+  font-size: 16px;
+  text-transform: capitalize;
+  transition: color 0.2s ease;
+}
+.navbar__link:hover {
   color: var(--main-color);
 }
-
-.header_content .navbar .navbar_booking {
+.navbar__booking {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -88,13 +94,8 @@ header {
   font-size: 16px;
   gap: 20px;
 }
-.header_content .navbar .navbar_booking a{
-  color: var(--white);
-}
-.header_content .navbar .navbar_booking a:hover {
-  color: var(--main-color);
-}
-.header_content .banner-text{
+
+.article-text {
   position: relative;
   margin-left: 80px;
   margin-top: 150px;
@@ -102,51 +103,60 @@ header {
   z-index: 10;
 }
 
-.header_content .banner-text .label {
+.article__label {
   display: flex;
   align-items: center;
   gap: 5px;
 
-  color: var(--text-color-2-60);
   font-size: 14px;
   letter-spacing: 2px;
 
   margin-bottom: 20px;
   opacity: 0.6;
 }
-
-.header_content .banner-text .label::before{
+.article__label::before {
   background-color: var(--text-color-2-60);
   content: "";
   width: 80px;
   height: 1.5px;
   display: block;
 }
-.header_content .banner-text h1 {
-  color: var(--white);
+.article__label-hero {
+  color: var(--text-color-2-60);
+}
+
+.article__title {
   text-transform: capitalize;
-  font-size: 75px;
-  font-weight:700;
   font-family: "Raleway", sans-serif;
 
   margin-bottom: 20px;
+  position: relative;
+  z-index: 5;
 }
-.header_content .banner-text .info {
-  color: var(--text-color-2);
+.article__title-hero {
+  color: var(--white);
+  font-size: 75px;
+  font-weight: 700;
+}
+
+.article__info {
   font-size: 16px;
   font-weight: 300;
 }
-.header_content .slider{
+.article__info-hero {
+  color: var(--text-color-2);
+}
+.slider {
   width: 100%;
   height: 100%;
 
   position: absolute;
   top: 0;
   left: 0;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
-.header_content .slider img{
+.slider .slider__img {
   width: 100%;
   position: absolute;
   top: 50%;
@@ -155,8 +165,7 @@ header {
   width: 100%;
   transform: translateX(-50%) translateY(-50%);
 }
-
-.header_content .overlay{
+.hero-section > .overlay {
   width: 100%;
   height: 100%;
 
@@ -164,5 +173,4 @@ header {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
-  z-index: 5;
 }
