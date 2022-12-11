@@ -53,6 +53,15 @@
   height: 100%;
   padding: 50px;
   width: calc(100% - 155px);
+  & > .overlay {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 }
 
 .navbar {
@@ -87,57 +96,6 @@
   }
 }
 
-.article-text {
-  position: relative;
-  margin-left: 80px;
-  margin-top: 150px;
-  width: 50%;
-  z-index: 10;
-
-  .article__label {
-    @include d-flex(center, flex-start);
-    gap: 5px;
-
-    font-size: 14px;
-    letter-spacing: 2px;
-
-    margin-bottom: 20px;
-    opacity: 0.6;
-  }
-  .article__label::before {
-    background-color: $text-color-2-60;
-    content: "";
-    width: 80px;
-    height: 1.5px;
-    display: block;
-  }
-  .article__label-hero {
-    color: $text-color-2-60;
-  }
-
-  .article__title {
-    text-transform: capitalize;
-    font-family: "Raleway", sans-serif;
-
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 5;
-  }
-  .article__title-hero {
-    color: $white;
-    font-size: 75px;
-    font-weight: 700;
-  }
-
-  .article__info {
-    font-size: 16px;
-    font-weight: 300;
-  }
-  .article__info-hero {
-    color: $text-color-2;
-  }
-}
-
 .slider {
   width: 100%;
   height: 100%;
@@ -155,14 +113,4 @@
 
     transform: translateX(-50%) translateY(-50%);
   }
-}
-
-.hero-section > .overlay {
-  width: 100%;
-  height: 100%;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.2);
 }
