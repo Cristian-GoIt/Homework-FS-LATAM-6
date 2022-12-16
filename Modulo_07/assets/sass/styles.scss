@@ -1,20 +1,22 @@
-@use "./components/header";
+@use "./components/header";  
 @use "./components/about";
-@import "./helppers/variables";
-@import "./helppers/mixins";
+@use "./components/services"; 
+
+@import "./helppers/variables"; 
+@import "./helppers/mixins"; 
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; 
 }
 body {
   font-family: "Open Sans", sans-serif;
 }
 a {
   text-decoration: none;
-}
+} 
 
 .main-button {
   background: $light-gray;
@@ -52,7 +54,7 @@ a {
   margin-left: 80px;
   margin-top: 150px;
   width: 50%;
-  z-index: 10;
+  z-index: 10; 
 
   .article__label {
     @include d-flex(center, flex-start);
@@ -87,6 +89,15 @@ a {
     background-color: $title-color;
   }
 
+  .article__label-dark {
+    color: $text-color-2-60;
+    font-weight: 600;
+    gap: 10px;
+  }
+  .article__label-dark > .rectangle {
+    background-color: $text-color-2-60;
+  }
+
   .article__title {
     text-transform: capitalize;
     font-family: "Raleway", sans-serif;
@@ -106,13 +117,17 @@ a {
     font-weight: 700;
     margin-bottom: 5px;
   }
-
+  .article__title-dark {
+    color: $white;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
   .article__call {
     font-size: 22px;
     line-height: 30px;
     margin-bottom: 20px;
   }
-
   .article__call-light {
     color: $text-color-1;
   }
